@@ -27,9 +27,18 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') { 
+        stage('Install') {
+                    steps {
+                        sh 'mvn install'
+                    }
+                    post {
+                        always {
+                           sh 'echo 构建完成'
+                        }
+
+        stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh' 
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }
