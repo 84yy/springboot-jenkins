@@ -6,11 +6,6 @@ pipeline {
         }
     }
     stages {
-        stage('ADD') {
-              steps {
-                        sh 'mvn -v'
-                    }
-            }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
@@ -20,6 +15,7 @@ pipeline {
             steps {
                 sh 'mvn clean'
                 sh 'mvn test'
+                sh 'mvn package'
             }
             post {
                 always {
@@ -27,15 +23,6 @@ pipeline {
                 }
             }
         }
-        stage('Install') {
-                    steps {
-                        sh 'mvn install'
-                    }
-                    post {
-                        always {
-                           sh 'echo 构建完成'
-                        }
-
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
