@@ -11,6 +11,7 @@ public class SpringbootJenkinsApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("执行了一个测试接口。。。。。。。。。");
 	}
 
 }
