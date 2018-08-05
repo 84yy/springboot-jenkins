@@ -61,8 +61,8 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
+							<!--<addClasspath>true</addClasspath>-->
+							<!--<classpathPrefix>lib/</classpathPrefix>-->
 							<mainClass>com.hzm.springbootjenkins.SpringbootJenkinsApplication</mainClass>
 						</manifest>
 					</archive>
