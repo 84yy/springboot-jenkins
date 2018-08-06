@@ -13,8 +13,6 @@ node {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
    stage('Deliver') {
-         steps {
                 sh './jenkins/scripts/deliver.sh'
-            }
    }
 }
