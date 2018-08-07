@@ -17,4 +17,4 @@ echo $JAVA_HOME
 # jar包名可以通过匹配获取需优化
 # 程序并没有后台运行
 nohup java -jar springboot-jenkins-0.0.1-SNAPSHOT.jar &
-
+echo 'over'
