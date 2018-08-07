@@ -1,5 +1,8 @@
 node {
    def mvnHome
+   environment{
+        def PORT=$server.port
+   }
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
       git 'https://github.com/jglick/simple-maven-project-with-tests.git'
@@ -13,9 +16,14 @@ node {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
    stage('Deliver') {
-                sh 'pwd'
+        steps{
+                  sh 'pwd'
+                  sh 'echo ${PORT}'
+
+        }
    }
    stage('Deliver') {
                 sh './jenkins/scripts/deliver.sh'
+
    }
 }
