@@ -18,6 +18,6 @@ echo $JAVA_HOME
 java -jar springboot-jenkins-0.0.1-SNAPSHOT.jar > out.log &
 echo '程序开始启动'
 if [ $? = 0 ];then
-        sleep 30
+#        sleep 30
         tail -n 50 out.log
 fi
