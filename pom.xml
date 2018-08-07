@@ -40,62 +40,8 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
-
-	<!--<build>-->
-		<!--<plugins>-->
-			<!--<plugin>-->
-				<!--<groupId>org.springframework.boot</groupId>-->
-				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-				<!--&lt;!&ndash;这里写上main方法所在类的路径&ndash;&gt;-->
-				<!--<configuration>-->
-					<!--<mainClass>com.hzm.springbootjenkins.SpringbootJenkinsApplication</mainClass>-->
-				<!--</configuration>-->
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<goals>-->
-							<!--<goal>repackage</goal>-->
-						<!--</goals>-->
-					<!--</execution>-->
-				<!--</executions>-->
-			<!--</plugin>-->
-		<!--</plugins>-->
-	<!--</build>-->
-	<!--<build>-->
-		<!--<plugins>-->
-			<!--<plugin>-->
-				<!--&lt;!&ndash; Build an executable JAR &ndash;&gt;-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-jar-plugin</artifactId>-->
-				<!--<version>3.1.0</version>-->
-				<!--<configuration>-->
-					<!--<archive>-->
-						<!--<manifest>-->
-							<!--<addClasspath>true</addClasspath>-->
-							<!--<classpathPrefix>lib/</classpathPrefix>-->
-							<!--<mainClass>com.hzm.springbootjenkins.SpringbootJenkinsApplication</mainClass>-->
-						<!--</manifest>-->
-					<!--</archive>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
-		<!--</plugins>-->
-	<!--</build>-->
 	<build>
 		<plugins>
-			<!--<plugin>-->
-				<!--&lt;!&ndash; Build an executable JAR &ndash;&gt;-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-jar-plugin</artifactId>-->
-				<!--<version>3.1.0</version>-->
-				<!--<configuration>-->
-					<!--<archive>-->
-						<!--<manifest>-->
-							<!--<addClasspath>true</addClasspath>-->
-							<!--<classpathPrefix>lib/</classpathPrefix>-->
-							<!--<mainClass>com.hzm.springbootjenkins.SpringbootJenkinsApplication</mainClass>-->
-						<!--</manifest>-->
-					<!--</archive>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -104,6 +50,13 @@
 					<mainClass>com.hzm.springbootjenkins.SpringbootJenkinsApplication</mainClass>
 					<fork>true</fork>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
