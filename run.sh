@@ -14,5 +14,7 @@ cd /home/jenkins/target
 export JAVA_HOME='/usr/local/java/jdk1.8.0_181'
 PATH=$PATH:$JAVA_HOME/bin
 echo $JAVA_HOME
-nohup java -jar springboot-jenkins-0.0.1-SNAPSHOT.jar
+# jar包名可以通过匹配获取需优化
+# 程序并没有后台运行
+nohup java -jar springboot-jenkins-0.0.1-SNAPSHOT.jar &
 
