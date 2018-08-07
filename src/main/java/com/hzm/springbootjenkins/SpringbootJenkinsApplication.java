@@ -16,6 +16,6 @@ public class SpringbootJenkinsApplication {
 
 	@RequestMapping("/")
 	public String hello(){
-		return "This is Springboot Jenkins Demo!";
+		return "This is Springboot Jenkins Demo22222!";
 	}
 }
