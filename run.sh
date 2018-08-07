@@ -16,6 +16,11 @@ PATH=$PATH:$JAVA_HOME/bin
 echo $JAVA_HOME
 # 程序后台运行,并把启动日志重定向到out.log
 java -jar springboot-jenkins-0.0.1-SNAPSHOT.jar > out.log &
+# 需要把包删除
+
+echo "脚本名$0"
+echo "第一个参数$1"
+
 echo '程序开始启动'
 if [ $? = 0 ];then
 #        sleep 30
