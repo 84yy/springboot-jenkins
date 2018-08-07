@@ -1,5 +1,4 @@
 pipeline {
-    def
     stages {
         stage('Build') { 
             steps {
